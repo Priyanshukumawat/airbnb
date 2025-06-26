@@ -1,0 +1,23 @@
+<header class="flex justify-start gap-5 items-center p-4 bg-red-500 text-white">
+  <a href="/"
+    class="<%= currentPage === 'Index' ? 'bg-white text-red-500 font-bold' : 'hover:underline' %> py-2 px-4 rounded transition duration-300">Airbnb</a>
+
+  <a href="/homes"
+    class="<%= currentPage === 'Home' ? 'bg-white text-red-500 font-bold' : 'hover:underline' %> py-2 px-4 rounded transition duration-300">Homes
+    List</a>
+
+  <a href="/bookings"
+    class="<%= currentPage === 'Bookings' ? 'bg-white text-red-500 font-bold' : 'hover:underline' %> py-2 px-4 rounded transition duration-300">Bookings</a>
+
+  <a href="/favourites"
+    class="<%= currentPage === 'Favourites' ? 'bg-white text-red-500 font-bold' : 'hover:underline' %> py-2 px-4 rounded transition duration-300">Favourites</a>
+
+  <a href="/host/host-home-list"
+    class="<%= currentPage === 'host-homes' ? 'bg-white text-red-500 font-bold' : 'hover:underline' %> py-2 px-4 rounded transition duration-300">Host
+    Homes</a>
+
+  <a href="/host/add-home"
+    class="<%= currentPage === 'Add Home' ? 'bg-white text-red-500 font-bold' : 'hover:underline' %> py-2 px-4 rounded transition duration-300">Add
+    Home</a>
+
+</header>

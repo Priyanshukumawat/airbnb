@@ -1,0 +1,25 @@
+<%- include('partials/head') -%>
+  </head>
+
+  <body>
+    <%- include('partials/header') -%>
+      <header>
+        <div class="flex justify-center items-start pt-5">
+          <div class="p-4 shadow-md rounded-md w-fit">
+            <h1 class="font-bold text-2xl">Here are our Registered Homes:</h1>
+            <ul class="list-disc pl-6 max-w-md mx-auto bg-white rounded-lg shadow divide-y">
+              <% registeredHomes.forEach(home=> { %>
+                <li class="px-4 py-3 hover:bg-gray-50 transition flex items-center">
+                  <span class="text-gray-900 font-medium">
+                    <%= home.houseName %>
+                  </span>
+                </li>
+                <% }); %>
+            </ul>
+
+          </div>
+        </div>
+      </header>
+  </body>
+
+  </html>
