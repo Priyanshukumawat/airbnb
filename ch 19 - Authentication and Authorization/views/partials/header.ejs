@@ -1,0 +1,41 @@
+<header class="flex justify-start gap-5 items-center p-4 bg-red-500 text-white">
+  <a href="/"
+    class="<%= currentPage === 'Index' ? 'bg-white text-red-500 font-bold' : 'hover:bg-red-400' %> py-2 px-4 rounded transition duration-300">Airbnb</a>
+
+  <% if (isLoggedIn) { %>
+    <% if (user && user.userType==='guest' ) { %>
+      <a href="/homes"
+        class="<%= currentPage === 'Home' ? 'bg-white text-red-500 font-bold' : 'hover:bg-red-400' %> py-2 px-4 rounded transition duration-300">Homes
+        List</a>
+
+      <a href="/bookings"
+        class="<%= currentPage === 'Bookings' ? 'bg-white text-red-500 font-bold' : 'hover:bg-red-400' %> py-2 px-4 rounded transition duration-300">Bookings</a>
+
+      <a href="/favourites"
+        class="<%= currentPage === 'favourites' ? 'bg-white text-red-500 font-bold' : 'hover:bg-red-400' %> py-2 px-4 rounded transition duration-300">Favourites</a>
+
+      <% } else { %>
+        <a href="/host/host-home-list"
+          class="<%= currentPage === 'host-homes' ? 'bg-white text-red-500 font-bold' : 'hover:bg-red-400' %> py-2 px-4 rounded transition duration-300">Host
+          Homes</a>
+
+        <a href="/host/add-home"
+          class="<%= currentPage === 'Add Home' ? 'bg-white text-red-500 font-bold' : 'hover:bg-red-400' %> py-2 px-4 rounded transition duration-300">Add
+          Home</a>
+        <% } %>
+          <% } %>
+
+            <% if (!isLoggedIn) { %>
+              <a href="/signup"
+                class="<%= currentPage === 'SignUp' ? 'bg-white text-red-500 font-bold' : 'hover:bg-red-400' %> py-2 px-4 rounded transition duration-300">SignUp</a>
+
+              <a href="/login"
+                class="<%= currentPage === 'Login' ? 'bg-white text-red-500 font-bold' : 'hover:bg-red-400' %> py-2 px-4 rounded transition duration-300">Login</a>
+
+              <% } else { %>
+                <form action="/logout" method="POST">
+                  <button type="submit"
+                    class="hover:bg-red-400 py-2 px-4 rounded transition duration-300">Logout</button>
+                </form>
+                <% } %>
+</header>
