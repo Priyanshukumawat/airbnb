@@ -1,0 +1,32 @@
+<%- include('../partials/head') -%>
+
+  </head>
+
+  <body>
+    <%- include('../partials/header') -%>
+
+      <main class="min-h-screen bg-gray-50 flex items-center justify-center p-4">
+        <div class="w-full max-w-md bg-white rounded-xl shadow-md overflow-hidden">
+          <div class="p-6">
+            <h1 class="text-xl font-bold text-center text-gray-800 mb-6">Login
+            </h1>
+            <form action="/login" method="POST" class="space-y-4">
+
+              <input type="text" name="username" placeholder="Enter your E-mail/Username"
+                class=" w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-400 transition"
+                required />
+              <input type="password" name="password" placeholder="Password"
+                class=" w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-400 transition"
+                required />
+
+              <input type="submit" value="Sign In"
+                class=" w-full py-3 bg-red-500 text-white font-semibold rounded-lg hover:bg-red-600 transition" />
+              <a href="/" class="block text-center text-red-500 hover:underline mt-4">Cancel</a>
+            </form>
+          </div>
+        </div>
+      </main>
+
+  </body>
+
+  </html>

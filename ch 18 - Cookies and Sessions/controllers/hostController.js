@@ -1,7 +1,7 @@
 const Home = require('../Models/home')
 
 exports.getAddHome = (req, res, next) => {
-  res.render('host/edit-home', { title: 'Add Home', currentPage: 'Add Home', editing: false });
+  res.render('host/edit-home', { title: 'Add Home', currentPage: 'Add Home', editing: false, isLoggedIn: req.isLoggedIn });
 }
 
 exports.getEditHome = (req, res, next) => {
@@ -14,14 +14,14 @@ exports.getEditHome = (req, res, next) => {
       return res.redirect('/host/host-home-list');
     }
     console.log('Home found:', home, 'Editing Home ID:', homeId, 'Editing:', editing);
-    res.render('host/edit-home', { title: 'Edit Home', home: home, currentPage: 'host-homes', editing: editing });
+    res.render('host/edit-home', { title: 'Edit Home', home: home, currentPage: 'host-homes', editing: editing, isLoggedIn: req.isLoggedIn });
   });
 }
 
 exports.getHostHomes = (req, res, next) => {
   Home.find().then(registeredHomes => {
     // console.log('Registered Homes:', registeredHomes);
-    res.render('host/host-home-list', { registeredHomes: registeredHomes, title: 'Host Homes List', currentPage: 'host-homes' });
+    res.render('host/host-home-list', { registeredHomes: registeredHomes, title: 'Host Homes List', currentPage: 'host-homes', isLoggedIn: req.isLoggedIn });
   });
 }
 
