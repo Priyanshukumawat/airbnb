@@ -1,11 +1,22 @@
-input {
-  width: 100%;
+/* App.css */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f7f7f7;
+  margin: 0;
+  padding: 0;
 }
 
-.kg-button {
-  min-width: 80px;
+.todo-container {
+  max-width: 600px;
+  margin: 3rem auto;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
-.kg-row {
-  margin: 10px 5px;
+h3 {
+  text-align: center;
+  margin: 1.5rem 0 1rem;
+  color: #333;
 }
